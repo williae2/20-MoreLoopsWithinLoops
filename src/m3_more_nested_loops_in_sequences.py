@@ -81,9 +81,11 @@ def largest_number(seq_seq):
     # ------------------------------------------------------------------
     for k in range(len(seq_seq)):
         my_list = seq_seq[k]
-        for j in range(my_list[k]):
-            if my_list[k] > my_list[0]:
-                
+        for j in range(len(my_list)):
+            if my_list[k] > my_list[k-1]:
+                return my_list[k]
+            else:
+                return None
 
 def run_test_largest_negative_number():
     """ Tests the    largest_negative_number    function. """
